@@ -1,10 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import React, { useState, useEffect } from 'react'
-import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import React from 'react'
 import { StackParamList } from './type'
-import { BottomTabNavigationBar } from './BottomTabNavigationBar'
+import { NavigationBar } from './NavigationBar'
 
-interface Props { }
 
 const Stack = createNativeStackNavigator<StackParamList>()
 const NavigationStack = () => {
@@ -15,13 +13,10 @@ const NavigationStack = () => {
                 animationDuration: 200,
                 animation: 'slide_from_right'
             }}>
-            <Stack.Screen name='BottomTabNavigationBar' component={BottomTabNavigationBar} />
+            <Stack.Screen name='NavigationBar' component={NavigationBar} />
         </Stack.Navigator>
     )
 }
 
-
-const styles = StyleSheet.create({
-})
 
 export default NavigationStack

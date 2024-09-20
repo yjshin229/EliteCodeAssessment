@@ -106,11 +106,7 @@ interface Props {
     onPress?: () => void
     onTextLayout?: (event: TextLayoutEvent) => void
     textAlign?: TypographyType.TextAlign
-    routeData?: {
-        instituteId: number
-        spaceId: number
-        disabled?: boolean
-    }
+
 }
 
 export const createTypographyComponent = (type: string) => (props: Props) => {
@@ -209,6 +205,6 @@ const createButtonTypography = (children: any, onPress: () => void) => {
     )
 }
 
-export const [DisplayL, DisplayM, DisplayS, HeadlineL, HeadlineM, HeadlineS, TitleXL, TitleL, TitleM, TitleS, LabelL, LabelM, LabelS, BodyL, BodyM] =
+export const [HeadlineL, HeadlineM, HeadlineS, TitleXL, TitleL, TitleM, TitleS, LabelL, LabelM, LabelS, BodyL, BodyM] =
     FontStyles.map((type: string) => createTypographyComponent(type))
 export { FontStyles }

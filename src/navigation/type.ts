@@ -6,7 +6,7 @@ export type Union<T extends { [key: string]: ValueType } | ReadonlyArray<ValueTy
   : never
 
   export const Stacks = {
-    BottomTabNavigationBar: 'BottomTabNavigationBar',
+   NavigationBar: 'NavigationBar',
    HomeScreen:'HomeScreen',
    SavedScreen: 'SavedScreen',
    SettingsScreen: 'SettingsScreen'
@@ -14,7 +14,7 @@ export type Union<T extends { [key: string]: ValueType } | ReadonlyArray<ValueTy
   export type Stacks = Union<typeof Stacks>
 
   export type StackParamList = {
-    [Stacks.BottomTabNavigationBar]: object
+    [Stacks.NavigationBar]: object
     [Stacks.HomeScreen]: object
     [Stacks.SavedScreen]: object
     [Stacks.SettingsScreen]: object

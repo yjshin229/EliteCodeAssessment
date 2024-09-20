@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 interface Props { }
 
