@@ -1,4 +1,5 @@
 package com.elitecodeassessment
+import android.os.Bundle; //for splash screen
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
@@ -12,6 +13,14 @@ class MainActivity : ReactActivity() {
    * rendering of the component.
    */
   override fun getMainComponentName(): String = "EliteCodeAssessment"
+
+   /**
+   * Show the splash screen and initialize the activity.
+   */
+  override fun onCreate(savedInstanceState: Bundle?) {
+    SplashScreen.show(this) // Show splash screen
+    super.onCreate(null) // Call super after splash screen
+  }
 
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
