@@ -43,5 +43,7 @@ export const BrandColor = {
       | '#FE9800'
       | '#fcd752'
       | '#14AE5C'
+      | '#5373FF'
+      | '#F8A00D'
       | 'transparent'
   }

@@ -141,7 +141,7 @@ export const createTypographyComponent = (type: string) => (props: Props) => {
                 isCodeText: children.isCodeText,
             }),
         )
-        textColor = children.color ? children.color : color || NeutralColor['neutral-10']
+        textColor = children.color ? children.color : color || "#000000"
     } else if (typeof children === 'string') {
         results.push(
             generateTypography({

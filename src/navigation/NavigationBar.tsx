@@ -4,11 +4,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../screens/home/HomeScreen'
-import SavedScreen from '../screens/saved/SavedScreen'
 import SettingsScreen from '../screens/settings/SettingsScreen'
 import { BrandColor, NeutralColor } from '../components/Design/Library'
 import { deviceInfo } from '../utilities/deviceInfo'
 import { Row, Span } from '../components/Design/StyleAsProps'
+import LibraryScreen from '../screens/saved/LibraryScreen';
 
 const BottomTab = createBottomTabNavigator()
 
@@ -21,8 +21,8 @@ export const NavigationBar = () => {
                 name="Home"
                 component={HomeScreen} />
             <BottomTab.Screen
-                name="Saved"
-                component={SavedScreen} />
+                name="Library"
+                component={LibraryScreen} />
             <BottomTab.Screen
                 name="Settings"
                 component={SettingsScreen} />
@@ -76,7 +76,7 @@ const BottomTabBarIcon = ({ focused, name }: { focused: boolean; name: string })
     switch (name) {
         case "Home":
             return <Ionicons name={focused ? "home" : 'home-outline'} size={24} color={color} />
-        case "Saved":
+        case "Library":
             return <Ionicons name={focused ? "bookmark" : 'bookmark-outline'} size={24} color={color} />
         case "Settings":
             return <Ionicons name={focused ? 'settings' : 'settings-outline'} size={24} color={color} />

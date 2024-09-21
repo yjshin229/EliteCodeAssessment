@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { LabelM } from '../../components/Design/Typography'
 
 interface Props { }
 
@@ -51,6 +52,7 @@ const SettingsScreen = ({ navigation, route }) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
+            <LabelM>This is a Settings screen</LabelM>
         </SafeAreaView>
     )
 

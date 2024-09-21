@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import { LabelM } from '../../components/Design/Typography'
+import BouncingButton from '../../components/Buttons/BouncingButton'
+import IconButton from '../../components/Buttons/IconButton'
+import CustomSafeAreaView from '../../components/CustomSafeAreaView'
 
 interface Props { }
 
@@ -51,8 +55,10 @@ const HomeScreen = ({ navigation, route }) => {
     ***********/
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
-        </SafeAreaView>
+        <CustomSafeAreaView hasBottomSpace>
+            <LabelM>This is a Home screen</LabelM>
+            <IconButton size='small' text={{ value: 'Hello' }} icon='cog' />
+        </CustomSafeAreaView>
     )
 
 }

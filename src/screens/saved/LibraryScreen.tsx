@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { LabelM } from '../../components/Design/Typography'
 
 interface Props { }
 
 
-const SavedScreen = ({ navigation, route }) => {
+const LibraryScreen = ({ navigation, route }) => {
 
     /*********
     * recoil
@@ -51,13 +52,12 @@ const SavedScreen = ({ navigation, route }) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
+            <LabelM>This is a Library screen</LabelM>
         </SafeAreaView>
     )
 
 }
 
 
-const styles = StyleSheet.create({
-})
 
-export default SavedScreen
+export default LibraryScreen
