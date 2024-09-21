@@ -1,6 +1,6 @@
-import React, { useState, useEffect, ReactNode } from 'react'
-import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity, ViewStyle } from 'react-native'
-import { NeutralColor, UniversalColorType } from './Design/Library'
+import React, { ReactNode } from 'react'
+import { View, ViewStyle } from 'react-native'
+import { NeutralColor, } from './Design/Library'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 interface Props {
@@ -18,7 +18,7 @@ const CustomSafeAreaView = ({ children, style, hasBottomSpace, backgroundColor }
     return (
         <View style={[{
             flex: 1,
-            backgroundColor: backgroundColor,
+            backgroundColor: NeutralColor[backgroundColor],
             paddingBottom: hasBottomSpace ? bottom : 0,
             paddingTop: top
         }, style]}>

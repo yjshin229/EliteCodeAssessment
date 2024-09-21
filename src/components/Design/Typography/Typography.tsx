@@ -50,18 +50,18 @@ const TextLineHeight = {
 }
 
 const TextFontFamily = {
-    HeadlineL: 'Monteserrat-Bold',
-    HeadlineM: 'Monteserrat-Bold',
-    HeadlineS: 'Monteserrat-Bold',
-    TitleXL: 'Monteserrat-SemiBold',
-    TitleL: 'Monteserrat-SemiBold',
-    TitleM: 'Monteserrat-SemiBold',
-    TitleS: 'Monteserrat-SemiBold',
-    LabelL: 'Monteserrat-Bold',
-    LabelM: 'Monteserrat-Bold',
-    LabelS: 'Monteserrat-Bold',
-    BodyL: 'Monteserrat-Regular',
-    BodyM: 'Monteserrat-Regular',
+    HeadlineL: 'Montserrat-Bold',
+    HeadlineM: 'Montserrat-Bold',
+    HeadlineS: 'Montserrat-Bold',
+    TitleXL: 'Montserrat-SemiBold',
+    TitleL: 'Montserrat-SemiBold',
+    TitleM: 'Montserrat-SemiBold',
+    TitleS: 'Montserrat-SemiBold',
+    LabelL: 'Montserrat-Bold',
+    LabelM: 'Montserrat-Bold',
+    LabelS: 'Montserrat-Bold',
+    BodyL: 'Montserrat-Regular',
+    BodyM: 'Montserrat-Regular',
 }
 
 const FontStyles = [
@@ -78,6 +78,21 @@ const FontStyles = [
     'BodyL',
     'BodyM',
 ]
+
+const TextFontWeight = {
+    HeadlineL: '800',
+    HeadlineM: '800',
+    HeadlineS: '800',
+    TitleXL: '600',
+    TitleL: '600',
+    TitleM: '600',
+    TitleS: '600',
+    LabelL: '800',
+    LabelM: '800',
+    LabelS: '800',
+    BodyL: '400',
+    BodyM: '400',
+}
 
 export interface TextLayoutEvent {
     lines: TextLayout[]
@@ -110,13 +125,14 @@ interface Props {
 }
 
 export const createTypographyComponent = (type: string) => (props: Props) => {
-    const { bold, fillWidth, shrinkWidth, color, margin, children, numberOfLines, textAlign, onPress, onTextLayout, routeData } = props
+    const { fillWidth, shrinkWidth, color, margin, children, numberOfLines, textAlign, onPress, onTextLayout } = props
     if (!children) return null
 
     let results = []
     let textColor = color
 
     const fontFamily = TextFontFamily[type]
+    const fontWeight = TextFontWeight[type]
 
     if (Array.isArray(children)) {
         results = children.map(child => {
@@ -127,7 +143,7 @@ export const createTypographyComponent = (type: string) => (props: Props) => {
                     textDecorationLine: child.textDecorationLine,
                     onPress: child.onPress,
                     fontFamily,
-                    isCodeText: child.isCodeText,
+                    fontWeight
                 })
             }
         })
@@ -138,7 +154,7 @@ export const createTypographyComponent = (type: string) => (props: Props) => {
                 textDecorationLine: children.textDecorationLine,
                 onPress: children.onPress,
                 fontFamily,
-                isCodeText: children.isCodeText,
+                fontWeight
             }),
         )
         textColor = children.color ? children.color : color || "#000000"
@@ -147,6 +163,7 @@ export const createTypographyComponent = (type: string) => (props: Props) => {
             generateTypography({
                 value: children,
                 fontFamily,
+                fontWeight
             }),
         )
     }
@@ -165,6 +182,7 @@ export const createTypographyComponent = (type: string) => (props: Props) => {
                     fontSize: TextSize[type],
                     letterSpacing: TextLetterSpacing[type],
                     lineHeight: TextLineHeight[type],
+                    fontWeight: TextFontWeight[type]
                 },
                 extractMargin(margin),
                 fillWidth ? { flex: 1 } : {},
@@ -180,14 +198,14 @@ export const createTypographyComponent = (type: string) => (props: Props) => {
     return onPress ? createButtonTypography(TypographyComp, onPress) : TypographyComp
 }
 
-const generateTypography = ({ value: text, color, textDecorationLine, onPress, fontFamily, isCodeText }: TypographyType.Attr) => {
+const generateTypography = ({ value: text, color, textDecorationLine, onPress, fontFamily, fontWeight }: TypographyType.Attr) => {
     if (!text || !text.length) return null
 
     return (
         <Text
             key={`text-${text.substring(0, 10)}`}
             allowFontScaling={false}
-            style={{ fontFamily, color, textDecorationLine, includeFontPadding: false }}
+            style={{ fontFamily, color, textDecorationLine, includeFontPadding: false, fontWeight }}
             onPress={onPress}>
             {text}
         </Text>

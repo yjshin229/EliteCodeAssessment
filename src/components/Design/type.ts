@@ -1,5 +1,6 @@
 // import { ButtonStyle } from '../Buttons'
 
+import { TextStyle } from "react-native";
 import { UniversalColorType } from "./Library";
 
 declare namespace SpaceStyle {
@@ -24,7 +25,7 @@ declare namespace ComponentStyle {
 
 
 declare namespace TypographyType {
-  type Weight = 'bold' | 'semi-bold' | 'regular'
+  type Weight = 'bold' | 'semi-bold' | 'regular' | '400' | '600' | '800'
   type Value = string | Attr | Attr[]
   type TextAlign = 'auto' | 'left' | 'right' | 'center' | 'justify'
 
@@ -37,7 +38,7 @@ declare namespace TypographyType {
     onPress?: () => void
     numberOfLine?: number
     fontFamily?: string
-    isCodeText?: boolean
+    fontWeight?: TextStyle['fontWeight']
   }
   interface AttrWithOnPress extends Attr {
     disable?: boolean
@@ -58,24 +59,6 @@ const ButtonSizeMap = {
   large: 48,
   xlarge: 56,
 } as const
-
-// declare namespace ButtonType {
-//   interface Attr {
-//     isFullWidthBtn?: boolean
-//     isProgress?: boolean
-//     hasBorder?: boolean
-//     text?: TypographyType.Attr
-//     size: ButtonStyle.Size
-//     icon?: IconType.AttrWithOnPress
-//     state?: ButtonStyle.State
-//     theme?: ButtonStyle.Theme
-//     margin?: SpaceStyle.Margin
-//     onPress: () => void
-//   }
-//   interface AttrWithType extends Attr {
-//     type: 'A' | 'B' | 'C'
-//   }
-// }
 
 
 const TEXT_INPUT_SIZE_MAP = {

@@ -10,7 +10,7 @@ import BouncingButton from './BouncingButton';
 
 
 
-const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, margin, onPress, backgroundColor }) => {
+const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, margin, onPress, backgroundColor, isFullWidth, width }) => {
 
     /************
     * function
@@ -90,7 +90,7 @@ const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, m
 
     const renderContent = () => {
         return (
-            <Row alignCenter justifyCenter w={'100%'} >
+            <Row alignCenter justifyCenter w={isFullWidth ? '100%' : width} >
                 {renderIcon()}
                 {renderText()}
             </Row>
@@ -114,7 +114,7 @@ const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, m
                     borderRadius: 12,
                     justifyContent: 'center',
                     alignItems: 'center',
-                    width: '100%',
+                    width: isFullWidth ? '100%' : width,
                     height: getHeight(),
                     backgroundColor: getBackgroundColor()
                 },

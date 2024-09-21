@@ -21,6 +21,7 @@ import { Row, Span } from './src/components/Design/StyleAsProps';
 import { NavigationBar } from './src/navigation/NavigationBar';
 import NavigationStack from './src/navigation/NavigationStack';
 import CustomSafeAreaView from './src/components/CustomSafeAreaView';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 
 const App = () => {
@@ -30,18 +31,19 @@ const App = () => {
   }, [])
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-
-
-      <StatusBar
-        barStyle={'dark-content'}
-        backgroundColor={"white"}
-      />
-      <NavigationContainer
-      >
-        <NavigationBar />
-      </NavigationContainer>
-    </GestureHandlerRootView>
+    <SafeAreaProvider>
+      <CustomSafeAreaView style={{ flex: 1 }}>
+        <GestureHandlerRootView style={{ flex: 1, backgroundColor: 'transparent' }} >
+          <StatusBar
+            barStyle={'dark-content'}
+            backgroundColor={"white"}
+          />
+          <NavigationContainer>
+            <NavigationBar />
+          </NavigationContainer>
+        </GestureHandlerRootView>
+      </CustomSafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

@@ -10,6 +10,8 @@ export interface ButtonComponentProps{
     onPress?: () => void
     backgroundColor?: UniversalColorType.Value
     icon?: string
+    isFullWidth?: boolean
+    width?: number
 }
 
 const ButtonSize = {

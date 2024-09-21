@@ -42,7 +42,7 @@ const convertPropsToMergedStyles = (props: { [kay: string]: any }, map: any, num
       continue
     }
 
-    // check if prop starts with string and ends with number ex) m100
+    // check if prop starts with string and ends with number ex) p10
     if (numberMap) {
       if (propName.match(/[A-Za-z]+[0-9]+/s)) {
         const result = propName.match(/[0-9]+/s)
@@ -95,31 +95,4 @@ const withLayoutStyleProps = <Props extends DefaultProps, RefType>(WrappedCompon
   })
 }
 
-const toTextStyle = (styleComp: React.ReactElement) => {
-  const { style, ...targetProps } = styleComp.props
-  if (style) {
-    console.warn('StyleProps: toTextStyle ignore React Native style prop')
-  }
-  const defaultStyle = {
-    fontFamily: 'Pretendard-Bold',
-  }
-  const [mergedStyles] = convertPropsToMergedStyles(targetProps, { ...mapPropToTextStyle, ...mapPropToLayoutStyle }, mapPropNumberToLayoutStyle)
-  return [defaultStyle, mergedStyles]
-}
-
-const withTextStyleProps = <Props extends { style?: StyleProp<TextStyle> }, RefType>(
-  WrappedComponent: React.ForwardRefRenderFunction<RefType, TextProps>,
-) => {
-  return React.forwardRef<RefType, Props & TextType & LayoutType>((props, ref) => {
-    const { style, ...targetProps } = props
-    const defaultStyle: TextStyle = { color: Colors.Neutral10 }
-    const [mergedStyles, otherProps] = convertPropsToMergedStyles(
-      targetProps,
-      { ...mapPropToTextStyle, ...mapPropToLayoutStyle },
-      mapPropNumberToLayoutStyle,
-    )
-    return WrappedComponent({ ...otherProps, style: [defaultStyle, style, mergedStyles] }, ref)
-  })
-}
-
-export { toStyle, withLayoutStyleProps, toTextStyle, withTextStyleProps }
+export { toStyle, withLayoutStyleProps }

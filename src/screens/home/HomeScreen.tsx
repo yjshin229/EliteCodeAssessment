@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import { LabelM } from '../../components/Design/Typography'
-import BouncingButton from '../../components/Buttons/BouncingButton'
+import { BodyM, HeadlineL, LabelM } from '../../components/Design/Typography'
 import IconButton from '../../components/Buttons/IconButton'
-import CustomSafeAreaView from '../../components/CustomSafeAreaView'
-
-interface Props { }
-
+import { Col, Span } from '../../components/Design/StyleAsProps'
+import WelcomeHeader from './WelcomeHeader'
+import { Text } from 'react-native'
+import ChallengeContent from '../../components/Content/ChallengeContent'
 
 const HomeScreen = ({ navigation, route }) => {
 
@@ -46,25 +43,20 @@ const HomeScreen = ({ navigation, route }) => {
     * render
     *********/
 
-    // if (isRendering === true) {
-    // return null
-    // }
+    const img = require("../../assets/images/User_01a.png")
 
     /***********
     * render()
     ***********/
 
     return (
-        <CustomSafeAreaView hasBottomSpace>
-            <LabelM>This is a Home screen</LabelM>
-            <IconButton size='small' text={{ value: 'Hello' }} icon='cog' />
-        </CustomSafeAreaView>
+        <Col flex ph18 pt12 bgNeutral100>
+            <WelcomeHeader name='John Doe' profilePic={img} />
+            <ChallengeContent text={`Challenge \nof the Day`} />
+        </Col>
     )
 
 }
 
-
-const styles = StyleSheet.create({
-})
 
 export default HomeScreen

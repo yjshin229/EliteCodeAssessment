@@ -9,6 +9,7 @@ import { BrandColor, NeutralColor } from '../components/Design/Library'
 import { deviceInfo } from '../utilities/deviceInfo'
 import { Row, Span } from '../components/Design/StyleAsProps'
 import LibraryScreen from '../screens/saved/LibraryScreen';
+import { LabelS } from '../components/Design/Typography';
 
 const BottomTab = createBottomTabNavigator()
 
@@ -62,7 +63,7 @@ const BottomTabBar = ({ state, descriptors, navigation }) => {
                         style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
                     >
                         <BottomTabBarIcon focused={isFocused} name={route.name} />
-                        {hasText && <Span labelS>{route.name}</Span>}
+                        {hasText && <LabelS>{route.name}</LabelS>}
                     </TouchableOpacity>
                 )
             })}
