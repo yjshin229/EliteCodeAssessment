@@ -22,6 +22,7 @@ import { NavigationBar } from './src/navigation/NavigationBar';
 import NavigationStack from './src/navigation/NavigationStack';
 import CustomSafeAreaView from './src/components/CustomSafeAreaView';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { EliteCodeNavigationRef } from './src/navigation/NavigationModule';
 
 
 const App = () => {
@@ -38,8 +39,8 @@ const App = () => {
             barStyle={'dark-content'}
             backgroundColor={"white"}
           />
-          <NavigationContainer>
-            <NavigationBar />
+          <NavigationContainer ref={EliteCodeNavigationRef}>
+            <NavigationStack />
           </NavigationContainer>
         </GestureHandlerRootView>
       </CustomSafeAreaView>

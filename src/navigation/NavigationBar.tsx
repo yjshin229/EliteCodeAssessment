@@ -7,7 +7,7 @@ import HomeScreen from '../screens/home/HomeScreen'
 import SettingsScreen from '../screens/settings/SettingsScreen'
 import { BrandColor, NeutralColor } from '../components/Design/Library'
 import { deviceInfo } from '../utilities/deviceInfo'
-import { Row, Span } from '../components/Design/StyleAsProps'
+import { Row } from '../components/Design/StyleAsProps'
 import LibraryScreen from '../screens/saved/LibraryScreen';
 import { LabelS } from '../components/Design/Typography';
 

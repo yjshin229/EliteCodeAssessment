@@ -4,6 +4,7 @@ import { Col, Row } from '../Design/StyleAsProps'
 import { TitleXL } from '../Design/Typography'
 import IconButton from '../Buttons/IconButton'
 import { deviceInfo } from '../../utilities/deviceInfo'
+import { EliteCodeNavigationModule } from '../../navigation/NavigationModule'
 
 interface Props {
     text: string
@@ -15,6 +16,12 @@ const ChallengeContent = ({ text }: Props) => {
     /************
     * functions
     ************/
+
+    const onPress = () => {
+        return (
+            EliteCodeNavigationModule.navigate("HomeDetailScreen")
+        )
+    }
 
     /*********
     * render
@@ -30,7 +37,12 @@ const ChallengeContent = ({ text }: Props) => {
 
     const renderButton = () => {
         return (
-            <IconButton backgroundColor='#000000' size='small' text={{ value: "Enter", color: '#ffffff' }} width={100} />
+            <IconButton
+                backgroundColor='#000000'
+                size='small'
+                text={{ value: "Enter", color: '#ffffff' }}
+                width={100}
+                onPress={onPress} />
         )
     }
 
@@ -69,6 +81,7 @@ const ChallengeContent = ({ text }: Props) => {
 
     return (
         <TouchableOpacity
+            onPress={onPress}
             style={[
                 renderShadow(),
                 { height: 150, borderRadius: 20, overflow: 'hidden', marginTop: 12 }]}>

@@ -1,3 +1,4 @@
+
 type ValueType = string | number | boolean
 export type Union<T extends { [key: string]: ValueType } | ReadonlyArray<ValueType>> = T extends ReadonlyArray<ValueType>
   ? T[number]
@@ -7,15 +8,11 @@ export type Union<T extends { [key: string]: ValueType } | ReadonlyArray<ValueTy
 
   export const Stacks = {
    NavigationBar: 'NavigationBar',
-   HomeScreen:'HomeScreen',
-   SavedScreen: 'SavedScreen',
-   SettingsScreen: 'SettingsScreen'
+   HomeDetailScreen : 'HomeDetailScreen'
   } as const
   export type Stacks = Union<typeof Stacks>
 
   export type StackParamList = {
     [Stacks.NavigationBar]: object
-    [Stacks.HomeScreen]: object
-    [Stacks.SavedScreen]: object
-    [Stacks.SettingsScreen]: object
+    [Stacks.HomeDetailScreen] : object
   }
