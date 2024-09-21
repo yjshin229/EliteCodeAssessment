@@ -44,20 +44,20 @@ const ChallengeContent = ({ text }: Props) => {
     }
 
     const renderShadow = () => {
-        if (deviceInfo.OS === 'ios') {
+        if (deviceInfo.OS === "android") {
             return (
                 {
-                    shadowColor: "rgba(0,0,0,0.25)",
-                    shadowOffset: { height: 2, width: 2 },
-                    shadowRadius: 5,
-                    shadowOpacity: 0.8
+                    elevation: 3,
+                    shadowColor: "rgba(0,0,0,0.25)"
                 }
             )
         } else {
             return (
                 {
-                    elevation: 3,
-                    shadowColor: "rgba(0,0,0,0.25)"
+                    shadowColor: "rgba(0,0,0,0)",
+                    shadowOffset: { height: 2, width: 2 },
+                    shadowRadius: 2,
+                    shadowOpacity: 0.8
                 }
             )
         }
@@ -78,10 +78,5 @@ const ChallengeContent = ({ text }: Props) => {
     )
 
 }
-
-
-const styles = StyleSheet.create({
-
-})
 
 export default ChallengeContent

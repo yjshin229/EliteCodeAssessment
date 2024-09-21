@@ -28,7 +28,6 @@ export const deviceInfo: {
         navigationBarHeight: number
     }
     buttonBottomSpace: number
-    isDevEnv: boolean
 } = {
     OS: Platform.OS,
     size: {
@@ -45,5 +44,4 @@ export const deviceInfo: {
         navigationBarHeight: Dimensions.get('screen').height - Dimensions.get('window').height + StatusBar.currentHeight,
     },
     buttonBottomSpace: isIphoneX ? 0 : 24,
-    isDevEnv: !!Config.API_URL?.includes('dev'),
 }
