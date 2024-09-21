@@ -1,10 +1,10 @@
-import React from 'react'
-import { ColorValue } from 'react-native'
-import { AlertColor, BrandColor, NeutralColor } from '../Library'
+import React from 'react';
+import { ColorValue } from 'react-native';
+import { AlertColor, BrandColor, NeutralColor } from '../Library';
 
-type numOrStr = number | string
-type numOrTrue = number | true
-type numOrStrOrBool = number | string | boolean
+type numOrStr = number | string;
+type numOrTrue = number | true;
+type numOrStrOrBool = number | string | boolean;
 
 export const Colors = {
   BrandBlue: BrandColor['brand-blue'],
@@ -25,7 +25,7 @@ export const Colors = {
   AlertWarning: AlertColor['alert-warning'],
   AlertNormal: AlertColor['alert-normal'],
   AlertCritical: AlertColor['alert-critical'],
-}
+};
 
 const mapPropNumberToLayoutStyle = {
   m: (n: number) => ({ margin: n }),
@@ -89,7 +89,7 @@ const mapPropNumberToLayoutStyle = {
   borderRW: (n: number) => ({ borderRightWidth: n }),
   borderTW: (n: number) => ({ borderTopWidth: n }),
   borderBW: (n: number) => ({ borderBottomWidth: n }),
-}
+};
 
 const mapPropToLayoutStyle = {
   h: (v: number) => ({ height: v }),
@@ -206,7 +206,7 @@ const mapPropToLayoutStyle = {
   borderRW: (v: number) => ({ borderRightWidth: v }),
   borderTW: (v: number) => ({ borderTopWidth: v }),
   borderBW: (v: number) => ({ borderBottomWidth: v }),
-}
+};
 
 const mapPropToTextStyle = {
   displayL: () => ({ fontSize: 57, letterSpacing: 0, lineHeight: 64, fontFamily: 'Montserrat-Bold' }),
@@ -249,20 +249,20 @@ const mapPropToTextStyle = {
   uppercase: () => ({ textTransform: 'uppercase' }),
   lowercase: () => ({ textTransform: 'lowercase' }),
   capitalize: () => ({ textTransform: 'capitalize' }),
-}
+};
 
 // colors
 Object.entries(Colors).forEach(([key, colorCode]) => {
   // layout
-  mapPropToLayoutStyle[`bg${key}`] = () => ({ backgroundColor: colorCode })
-  mapPropToLayoutStyle[`border${key}`] = () => ({ borderColor: colorCode })
-  mapPropToLayoutStyle[`borderL${key}`] = () => ({ borderLeftColor: colorCode })
-  mapPropToLayoutStyle[`borderR${key}`] = () => ({ borderRightColor: colorCode })
-  mapPropToLayoutStyle[`borderT${key}`] = () => ({ borderTopColor: colorCode })
-  mapPropToLayoutStyle[`borderB${key}`] = () => ({ borderBottomColor: colorCode })
+  mapPropToLayoutStyle[`bg${key}`] = () => ({ backgroundColor: colorCode });
+  mapPropToLayoutStyle[`border${key}`] = () => ({ borderColor: colorCode });
+  mapPropToLayoutStyle[`borderL${key}`] = () => ({ borderLeftColor: colorCode });
+  mapPropToLayoutStyle[`borderR${key}`] = () => ({ borderRightColor: colorCode });
+  mapPropToLayoutStyle[`borderT${key}`] = () => ({ borderTopColor: colorCode });
+  mapPropToLayoutStyle[`borderB${key}`] = () => ({ borderBottomColor: colorCode });
   // text
-  mapPropToTextStyle[`color${key}`] = () => ({ color: colorCode })
-})
+  mapPropToTextStyle[`color${key}`] = () => ({ color: colorCode });
+});
 
 type LayoutColorProps =
   | `bg${string & keyof typeof Colors}`
@@ -270,33 +270,31 @@ type LayoutColorProps =
   | `borderL${string & keyof typeof Colors}`
   | `borderR${string & keyof typeof Colors}`
   | `borderT${string & keyof typeof Colors}`
-  | `borderB${string & keyof typeof Colors}`
-export type LayoutColorType = { [key in LayoutColorProps]?: true }
-type LayoutTemplateLiteral = `${string & keyof typeof mapPropNumberToLayoutStyle}${number}`
-type LayoutNumberType = { [key in LayoutTemplateLiteral]?: boolean }
-type LayoutPropType = { [key in keyof typeof mapPropToLayoutStyle]?: numOrStrOrBool }
+  | `borderB${string & keyof typeof Colors}`;
+export type LayoutColorType = { [key in LayoutColorProps]?: true };
+type LayoutTemplateLiteral = `${string & keyof typeof mapPropNumberToLayoutStyle}${number}`;
+type LayoutNumberType = { [key in LayoutTemplateLiteral]?: boolean };
+type LayoutPropType = { [key in keyof typeof mapPropToLayoutStyle]?: numOrStrOrBool };
 
-type TextColorProps = `color${string & keyof typeof Colors}`
-type TextColorType = { [key in TextColorProps]?: true }
-type TextPropType = { [key in keyof typeof mapPropToTextStyle]?: numOrStrOrBool }
+type TextColorProps = `color${string & keyof typeof Colors}`;
+type TextColorType = { [key in TextColorProps]?: true };
+type TextPropType = { [key in keyof typeof mapPropToTextStyle]?: numOrStrOrBool };
 
-type SingleOrArray<T> = T | T[]
-export type StyleComp = SingleOrArray<React.ReactElement | boolean>
+type SingleOrArray<T> = T | T[];
+export type StyleComp = SingleOrArray<React.ReactElement | boolean>;
 
 type LayoutType = LayoutPropType &
   LayoutColorType &
   LayoutNumberType & {
-    _style?: StyleComp
-    _isVisible?: boolean
-  }
+    _style?: StyleComp;
+    _isVisible?: boolean;
+  };
 
 type TextType = TextPropType &
   TextColorType & {
-    _style?: StyleComp
-    _isVisible?: boolean
-  }
+    _style?: StyleComp;
+    _isVisible?: boolean;
+  };
 
-
-
-export { mapPropNumberToLayoutStyle, mapPropToLayoutStyle, mapPropToTextStyle }
-export type { LayoutType, TextType }
+export { mapPropNumberToLayoutStyle, mapPropToLayoutStyle, mapPropToTextStyle };
+export type { LayoutType, TextType };
