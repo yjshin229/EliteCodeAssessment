@@ -13,7 +13,7 @@ import { LabelS } from '../components/Design/Typography';
 
 const BottomTab = createBottomTabNavigator();
 
-export const NavigationBar = () => {
+export const BottomNavigation = () => {
   return (
     <BottomTab.Navigator tabBar={props => <BottomTabBar {...props} />} screenOptions={{ headerShown: false }}>
       <BottomTab.Screen name="Home" component={HomeScreen} />
@@ -26,16 +26,17 @@ export const NavigationBar = () => {
 const BottomTabBar = ({ state, descriptors, navigation }) => {
   return (
     <Row
-      h64
+      h={deviceInfo.iosHasNotch ? 88 : 64}
       bgNeutral100
       alignCenter
       ph16
-      mb={deviceInfo.isIphoneX ? 22 : 0}
+      pb={deviceInfo.iosHasNotch ? 22 : 0}
       borderTW1
       borderTColor={NeutralColor['neutral-90']}
       shadowColor={'rgba(0,0,0,0.1)'}
       shadowOpacity={0.35}
-      shadowRadius={4}>
+      shadowRadius={4}
+      style={deviceInfo.OS === 'android' ? { elevation: 4, shadowColor: 'rgba(0,0,0,0.35)' } : undefined}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
 

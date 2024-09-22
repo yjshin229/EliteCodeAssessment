@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { BodyM, HeadlineL, HeadlineS, LabelM, TitleXL } from '../../components/Design/Typography';
-import IconButton from '../../components/Buttons/IconButton';
+import React from 'react';
+import { BodyM, TitleXL } from '../../components/Design/Typography';
 import { Col, Row } from '../../components/Design/StyleAsProps';
 import WelcomeHeader from './WelcomeHeader';
-import { Text } from 'react-native';
-import ChallengeContent from '../../components/Content/ChallengeContent';
+import ChallengeCard from '../../components/Card/ChallengeCard';
 
 const HomeScreen = ({ navigation, route }) => {
   /************
@@ -33,7 +31,7 @@ const HomeScreen = ({ navigation, route }) => {
   return (
     <Col flex ph18 pt12 bgNeutral100>
       <WelcomeHeader name="John Doe" profilePic={img} />
-      <ChallengeContent text={`Challenge \nof the Day`} />
+      <ChallengeCard text={`Challenge \nof the Day`} />
       {renderExploreHeader()}
     </Col>
   );

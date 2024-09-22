@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { ButtonComponentProps } from '.';
 import { extractMargin, NeutralColor, UniversalColorType } from '../Design/Library';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { LabelL, LabelM } from '../Design/Typography';
 import { TypographyType } from '../Design/type';
 import { Row } from '../Design/StyleAsProps';
-import BouncingButton from './BouncingButton';
 
 const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, margin, onPress, backgroundColor, isFullWidth, width }) => {
   /************
@@ -14,20 +13,20 @@ const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, m
    ************/
   const getBackgroundColor = (): UniversalColorType.Value => {
     if (backgroundColor) return backgroundColor;
-    if (!state || state === 'enabled') return '#ffffff';
-    else if (state === 'pressed' || state === 'disabled') return '#c0c4cf';
+    if (!state || state === 'enabled') return NeutralColor['neutral-100'];
+    else if (state === 'pressed' || state === 'disabled') return NeutralColor['neutral-80'];
   };
 
-  const getBorderColor = () => {
-    if (state === 'pressed' || state === 'disabled') return NeutralColor['neutral-30'];
+  const getBorderColor = (): UniversalColorType.Value => {
+    if (state === 'pressed' || state === 'disabled') return NeutralColor['neutral-50'];
     return NeutralColor['neutral-0'];
   };
 
   const getTextColor = (): UniversalColorType.Value => {
     if (!text) return;
     if (text?.color) return text?.color;
-    if (state === 'pressed' || state === 'disabled') return '#3f3f3f';
-    else return '#000000';
+    if (state === 'pressed' || state === 'disabled') return NeutralColor['neutral-50'];
+    else return NeutralColor['neutral-0'];
   };
 
   const getText = (): TypographyType.Attr => {
@@ -37,7 +36,7 @@ const IconButton: React.FC<ButtonComponentProps> = ({ state, text, size, icon, m
 
   const getHeight = () => {
     if (size === 'small') return 32;
-    else 40;
+    return 40;
   };
 
   const getPadding = () => {

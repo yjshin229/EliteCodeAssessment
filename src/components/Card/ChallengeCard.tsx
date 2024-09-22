@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import React from 'react';
+import { TouchableOpacity, Image } from 'react-native';
 import { Col, Row } from '../Design/StyleAsProps';
 import { TitleXL } from '../Design/Typography';
 import IconButton from '../Buttons/IconButton';
 import { deviceInfo } from '../../utilities/deviceInfo';
 import { EliteCodeNavigationModule } from '../../navigation/NavigationModule';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { NeutralColor } from '../Design/Library';
 
 interface Props {
   text: string;
 }
 
-const ChallengeContent = ({ text }: Props) => {
+const ChallengeCard = ({ text }: Props) => {
   /************
    * functions
    ************/
 
   const onPress = () => {
-    return EliteCodeNavigationModule.navigate('HomeDetailScreen');
+    return EliteCodeNavigationModule.navigate('HomeDetailScreen', { title: 'Challenge of the Day' });
   };
 
   /*********
@@ -32,7 +34,15 @@ const ChallengeContent = ({ text }: Props) => {
   };
 
   const renderButton = () => {
-    return <IconButton backgroundColor="#000000" size="small" text={{ value: 'Enter', color: '#ffffff' }} width={100} onPress={onPress} />;
+    return (
+      <IconButton
+        backgroundColor="#000000"
+        size="small"
+        text={{ value: 'Enter', color: NeutralColor['neutral-100'] }}
+        width={100}
+        onPress={onPress}
+      />
+    );
   };
 
   const renderContent = () => {
@@ -47,7 +57,7 @@ const ChallengeContent = ({ text }: Props) => {
   const renderShadow = () => {
     if (deviceInfo.OS === 'android') {
       return {
-        elevation: 6,
+        elevation: 4,
         shadowColor: 'rgba(0,0,0,0.35)',
       };
     } else {
@@ -66,12 +76,12 @@ const ChallengeContent = ({ text }: Props) => {
 
   return (
     <Col style={renderShadow()} radius20 mt12>
-      <TouchableOpacity onPress={onPress} style={[{ height: 150, borderRadius: 20, overflow: 'hidden' }]}>
+      <TouchableWithoutFeedback onPress={onPress} style={[{ height: 150, borderRadius: 20, overflow: 'hidden' }]}>
         <Image source={require('../../assets/images/challenge_bg.png')} style={{ width: '100%', height: '100%' }} />
         {renderContent()}
-      </TouchableOpacity>
+      </TouchableWithoutFeedback>
     </Col>
   );
 };
 
-export default ChallengeContent;
+export default ChallengeCard;

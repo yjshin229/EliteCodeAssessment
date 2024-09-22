@@ -25,24 +25,10 @@ export const AlertColor = {
 };
 
 export declare namespace UniversalColorType {
-  type Value =
-    | '#000000'
-    | '#232427'
-    | '#3f3f3f'
-    | '#6a6d75'
-    | '#8d919c'
-    | '#b1b5c2'
-    | '#c0c4cf'
-    | '#d0d3db'
-    | '#e0e2e7'
-    | '#eff0f3'
-    | '#f7f8f9'
-    | '#ffffff'
-    | '#EC221F'
-    | '#FE9800'
-    | '#fcd752'
-    | '#14AE5C'
-    | '#5373FF'
-    | '#F8A00D'
-    | 'transparent';
+  type ColorKeys = keyof typeof BrandColor | keyof typeof NeutralColor | keyof typeof AlertColor;
+
+  type ColorMap = {
+    [K in ColorKeys]: (typeof BrandColor & typeof NeutralColor & typeof AlertColor)[K];
+  };
+  type Value = ColorMap[ColorKeys] | keyof ColorMap | 'transparent';
 }

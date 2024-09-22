@@ -3,7 +3,7 @@ import { Platform, Dimensions, StatusBar } from 'react-native';
 import Config from 'react-native-config';
 import DeviceInfo from 'react-native-device-info';
 
-const isIphoneX = Platform.OS === 'ios' && DeviceInfo.hasNotch();
+const iosHasNotch = Platform.OS === 'ios' && DeviceInfo.hasNotch();
 
 const getSafeAreaTopSpace = () => {
   if (Platform.OS === 'ios' && DeviceInfo.hasDynamicIsland()) return 59;
@@ -18,7 +18,7 @@ export const deviceInfo: {
     width: number;
     height: number;
   };
-  isIphoneX: boolean;
+  iosHasNotch: boolean;
   isAndroid: boolean;
   safeAreaTopSpace: number;
   safeAreaBottomSpace: number;
@@ -34,14 +34,14 @@ export const deviceInfo: {
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
   },
-  isIphoneX: isIphoneX,
+  iosHasNotch: iosHasNotch,
   isAndroid: Platform.OS === 'android',
   safeAreaTopSpace: getSafeAreaTopSpace(),
-  safeAreaBottomSpace: isIphoneX ? 34 : 0,
+  safeAreaBottomSpace: iosHasNotch ? 34 : 0,
   navigationBarHeight: Platform.OS === 'android' ? Dimensions.get('screen').height - Dimensions.get('window').height + StatusBar.currentHeight : 0,
   androidExtraDimension: {
     statusBarHeight: Number(StatusBar.currentHeight),
     navigationBarHeight: Dimensions.get('screen').height - Dimensions.get('window').height + StatusBar.currentHeight,
   },
-  buttonBottomSpace: isIphoneX ? 0 : 24,
+  buttonBottomSpace: iosHasNotch ? 0 : 24,
 };

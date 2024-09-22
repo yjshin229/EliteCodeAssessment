@@ -11,10 +11,9 @@ import { StatusBar, StyleSheet } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { NavigationBar } from './src/navigation/NavigationBar';
 import NavigationStack from './src/navigation/NavigationStack';
 import CustomSafeAreaView from './src/components/CustomSafeAreaView';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { EliteCodeNavigationRef } from './src/navigation/NavigationModule';
 
 const App = () => {
@@ -24,12 +23,11 @@ const App = () => {
 
   return (
     <SafeAreaProvider>
-      <CustomSafeAreaView style={{ flex: 1 }}>
-        <GestureHandlerRootView style={{ flex: 1, backgroundColor: 'transparent' }}>
+      <CustomSafeAreaView>
+        <GestureHandlerRootView style={{ flex: 1, backgroundColor: 'white' }}>
           <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
           <NavigationContainer ref={EliteCodeNavigationRef}>
             <NavigationStack />
-            {/* <NavigationBar /> */}
           </NavigationContainer>
         </GestureHandlerRootView>
       </CustomSafeAreaView>
