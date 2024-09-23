@@ -7,8 +7,10 @@ import { HeadlineM } from '../Design/Typography';
 import IconButton from '../Buttons/IconButton';
 import { NeutralColor } from '../Design/Library';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import Modal from 'react-native-modal';
 
 interface ModalProps {
+  isVisible: boolean;
   title: string;
   children: ReactNode;
   buttonText: string;
@@ -16,7 +18,7 @@ interface ModalProps {
   onButtonPress: () => void;
 }
 
-const Modal = ({ title, children, buttonText, onClose, onButtonPress }: ModalProps) => {
+const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButtonPress }: ModalProps) => {
   /*********
    * recoil
    *********/
@@ -57,27 +59,25 @@ const Modal = ({ title, children, buttonText, onClose, onButtonPress }: ModalPro
    ***********/
 
   return (
-    <Col absolute top0 left0 justifyCenter alignCenter bg={'rgba(0,0,0,0.25)'}>
-      <Col w={'85%'} bgNeutral100 radius20 pt12 pb22 ph18>
-        <TouchableWithoutFeedback onPress={onClose} style={{ alignSelf: 'flex-end' }}>
+    <Modal isVisible={isVisible} onBackdropPress={onClose}>
+      <Col bgNeutral100 radius20 ph18 pb22 pt12 justifyCenter alignCenter>
+        <TouchableOpacity style={{ alignSelf: 'flex-end' }}>
           <Ionicons name="close-outline" size={24} />
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
         <HeadlineM>{title}</HeadlineM>
-        <Col justifyCenter alignCenter mt12>
-          {children}
-        </Col>
+        <Col>{children}</Col>
         <IconButton
           text={{ value: buttonText, color: NeutralColor['neutral-100'] }}
-          backgroundColor="#000000"
           size="small"
-          width={100}
           onPress={onButtonPress}
+          width={120}
+          backgroundColor={NeutralColor['neutral-0']}
         />
       </Col>
-    </Col>
+    </Modal>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default Modal;
+export default CustomModal;

@@ -13,11 +13,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		28A77C3C830C276C71788C1D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3667FABA03CBC90F660AA8C5 /* PrivacyInfo.xcprivacy */; };
 		3A120194357C709401AED418 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBACC307CF174D0B413392E2 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */; };
+		3E46A6DB5BB246889D2A1051 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */; };
 		73F303927E025C5A8F925F67 /* libPods-EliteCodeAssessment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB0113E8FD291E399C50ACC /* libPods-EliteCodeAssessment.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E620AD0714D044E3B647B039 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */; };
-		3E46A6DB5BB246889D2A1051 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */; };
 		883C01CF42374C2B93EFF93D /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 041295610D7245D386DFCFB8 /* Montserrat-SemiBold.ttf */; };
+		E620AD0714D044E3B647B039 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 		00E356EE1AD99517003FC87E /* EliteCodeAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EliteCodeAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* EliteCodeAssessmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EliteCodeAssessmentTests.m; sourceTree = "<group>"; };
+		041295610D7245D386DFCFB8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBold.ttf"; path = "../src/assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* EliteCodeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EliteCodeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EliteCodeAssessment/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = EliteCodeAssessment/AppDelegate.mm; sourceTree = "<group>"; };
@@ -43,16 +44,15 @@
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = EliteCodeAssessment/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		2B000BB2BF431722A60DB4A4 /* Pods-EliteCodeAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment.release.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		3667FABA03CBC90F660AA8C5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = EliteCodeAssessment/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		6AB0113E8FD291E399C50ACC /* libPods-EliteCodeAssessment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EliteCodeAssessment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EliteCodeAssessment/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBACC307CF174D0B413392E2 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D528D4F7C2C74923C4095D99 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F4976148819A1006473A5A9F /* Pods-EliteCodeAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment.debug.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCAC4CDED9EB40672311CEF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
-		6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		041295610D7245D386DFCFB8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBold.ttf"; path = "../src/assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,15 +161,15 @@
 			sourceTree = "<group>";
 		};
 		E13A8E1B86494E5CAE051007 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */,
 				544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */,
 				041295610D7245D386DFCFB8 /* Montserrat-SemiBold.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

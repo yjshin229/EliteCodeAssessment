@@ -6,8 +6,9 @@ import { Col, Row } from '../../components/Design/StyleAsProps';
 import AnswerCard from '../../components/Card/AnswerCard';
 import { BrandColor } from '../../components/Design/Library';
 import IconButton from '../../components/Buttons/IconButton';
-import Modal from '../../components/Modal/Modal';
+import Modal from '../../components/Modal/CustomModal';
 import { EliteCodeNavigationModule } from '../../navigation/NavigationModule';
+import CustomModal from '../../components/Modal/CustomModal';
 
 interface Props {}
 
@@ -52,7 +53,7 @@ const HomeDetailScreen = ({ navigation, route }) => {
     setSelected(option);
   };
 
-  const handlePress = () => {
+  const handleSubmit = () => {
     setModalVisible(true);
     console.log(isModalVisible);
   };
@@ -109,7 +110,7 @@ const HomeDetailScreen = ({ navigation, route }) => {
 
     const modalChildren = () => {
       return (
-        <Col flex mt12>
+        <Col mt12>
           <BodyL>You've earned your daily challenge bronze badge!</BodyL>
           <Row bgAlertMinor h60 mt12></Row>
         </Col>
@@ -117,9 +118,9 @@ const HomeDetailScreen = ({ navigation, route }) => {
     };
 
     return (
-      <Modal title="Congratulations!" buttonText="Back to Home" onButtonPress={onButtonPress} onClose={onClose}>
+      <CustomModal isVisible={isModalVisible} title="Congratulations!" buttonText="Back to Home" onButtonPress={onButtonPress} onClose={onClose}>
         {modalChildren()}
-      </Modal>
+      </CustomModal>
     );
   };
   /***********
@@ -128,14 +129,14 @@ const HomeDetailScreen = ({ navigation, route }) => {
 
   return (
     <>
-      {isModalVisible && renderModal()}
+      {renderModal()}
       <Col flex bgNeutral100>
         <Header title={headerTitle} hasDivider hasNavigationBackBtn />
         <Col mt12 ph18 mb22 flex>
           {renderQuestion()}
           {renderQuestionCode()}
           {renderAnswerOptions()}
-          <IconButton text={{ value: 'Submit' }} isFullWidth size="medium" onPress={handlePress} state={!selected ? 'disabled' : 'enabled'} />
+          <IconButton text={{ value: 'Submit' }} isFullWidth size="medium" onPress={handleSubmit} state={!selected ? 'disabled' : 'enabled'} />
         </Col>
       </Col>
     </>
