@@ -58,7 +58,6 @@ const HomeDetailScreen = ({ navigation, route }) => {
 
   const handleSubmit = () => {
     setModalVisible(true);
-    console.log(isModalVisible);
   };
 
   /*********
