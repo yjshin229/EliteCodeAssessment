@@ -61,7 +61,7 @@ const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButton
   return (
     <Modal isVisible={isVisible} onBackdropPress={onClose}>
       <Col bgNeutral100 radius20 ph18 pb22 pt12 justifyCenter alignCenter>
-        <TouchableOpacity style={{ alignSelf: 'flex-end' }}>
+        <TouchableOpacity style={{ alignSelf: 'flex-end' }} onPress={onClose}>
           <Ionicons name="close-outline" size={24} />
         </TouchableOpacity>
         <HeadlineM>{title}</HeadlineM>
@@ -72,6 +72,7 @@ const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButton
           onPress={onButtonPress}
           width={120}
           backgroundColor={NeutralColor['neutral-0']}
+          margin={{ top: 12 }}
         />
       </Col>
     </Modal>

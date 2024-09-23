@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "adb-start-android": "adb shell am force-stop com.elitecodeassessment && adb shell pm clear com.elitecodeassessment && react-native run-android",
     "ios": "react-native run-ios  --simulator=\"iPhone 15 Pro\"",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
     "prettier:check": "prettier --check .",
-    "prettier:write": "prettier --write ."
+    "prettier:write": "prettier --write .",
+    "clean-android": "cd android && ./gradlew clean && cd .. && rm -rf android/app/build && watchman watch-del-all && rm -rf \"$TMPDIR/react-native-packager-cache-*\" && rm -rf \"$TMPDIR/metro-bundler-cache-*\" && rm -rf node_modules && yarn install && react-native run-android",
+    "clean-ios": "watchman watch-del-all && rm -rf \"$TMPDIR/react-native-packager-cache-*\" && rm -rf \"$TMPDIR/metro-bundler-cache-*\" && rm -rf node_modules && rm -rf ios/build && rm -rf ios/Pods && yarn install && cd ios && pod install && cd .. && react-native run-ios"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.6.1",

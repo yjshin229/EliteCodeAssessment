@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 import { BodyL, BodyM, LabelL } from '../../components/Design/Typography';
 import { Header } from '../../components/Header';
 import { Col, Row } from '../../components/Design/StyleAsProps';
 import AnswerCard from '../../components/Card/AnswerCard';
 import { BrandColor } from '../../components/Design/Library';
 import IconButton from '../../components/Buttons/IconButton';
-import Modal from '../../components/Modal/CustomModal';
 import { EliteCodeNavigationModule } from '../../navigation/NavigationModule';
 import CustomModal from '../../components/Modal/CustomModal';
+import ProgressBar from '../../components/ProgressBar/ProgressBar';
 
 interface Props {}
 
@@ -110,9 +110,13 @@ const HomeDetailScreen = ({ navigation, route }) => {
 
     const modalChildren = () => {
       return (
-        <Col mt12>
+        <Col mt12 justifyCenter alignCenter>
+          <Col alignCenter>
+            <Image source={require('../../assets/images/badges/bronze_badge.png')} style={{ width: 120, height: 179 }} />
+          </Col>
           <BodyL>You've earned your daily challenge bronze badge!</BodyL>
-          <Row bgAlertMinor h60 mt12></Row>
+
+          <ProgressBar title="Earn silver badge" progress={10} style={{ marginTop: 12 }} />
         </Col>
       );
     };
@@ -136,6 +140,7 @@ const HomeDetailScreen = ({ navigation, route }) => {
           {renderQuestion()}
           {renderQuestionCode()}
           {renderAnswerOptions()}
+
           <IconButton text={{ value: 'Submit' }} isFullWidth size="medium" onPress={handleSubmit} state={!selected ? 'disabled' : 'enabled'} />
         </Col>
       </Col>
