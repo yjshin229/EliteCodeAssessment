@@ -16,9 +16,10 @@ interface ModalProps {
   buttonText: string;
   onClose: () => void;
   onButtonPress: () => void;
+  animationIn?: 'zoomIn' | 'shake';
 }
 
-const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButtonPress }: ModalProps) => {
+const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButtonPress, animationIn = 'zoomIn' }: ModalProps) => {
   /*********
    * recoil
    *********/
@@ -59,7 +60,13 @@ const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButton
    ***********/
 
   return (
-    <Modal isVisible={isVisible} onBackdropPress={onClose}>
+    <Modal
+      isVisible={isVisible}
+      onBackdropPress={onClose}
+      animationOutTiming={500}
+      animationInTiming={500}
+      animationIn={animationIn}
+      animationOut={'zoomOut'}>
       <Col bgNeutral100 radius20 ph18 pb22 pt12 justifyCenter alignCenter>
         <TouchableOpacity style={{ alignSelf: 'flex-end' }} onPress={onClose}>
           <Ionicons name="close-outline" size={24} />

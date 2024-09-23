@@ -9,6 +9,9 @@ import IconButton from '../../components/Buttons/IconButton';
 import { EliteCodeNavigationModule } from '../../navigation/NavigationModule';
 import CustomModal from '../../components/Modal/CustomModal';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
+import { bronze_badge, silver_badge } from '../../assets/images/badges';
+import LottieView from 'lottie-react-native';
+import { animation_confetti } from '../../assets/animations';
 
 interface Props {}
 
@@ -22,13 +25,13 @@ const HomeDetailScreen = ({ navigation, route }) => {
   const questionExample = {
     question: 'What is the output of the following code?',
     code: `console.log(1 + "2" + "2");`,
-    answer: '1',
+    answer: 1,
     explanation: {
       1: `Correct! JavaScript performs type coercion when using the + operator with numbers and strings.
 1 + "2" results in the string "12", because 1 (a number) is coerced to a string and concatenated with "2".`,
-      2: `Try again. JavaScript doesn't perform arithmetic when combining numbers and strings; instead, it converts the number to a string and concatenates from left to right.`,
-      3: `Try again.  In JavaScript,  when you add a number to a string, JavaScript treats the number like a string, converting it and concatenating them instead of performing arithmetic.`,
-      4: `Try again. NaN (Not a Number) occurs when performing invalid mathematical operations, but here JavaScript is doing string concatenation, not math, so NaN wouldn't be the result.`,
+      2: `JavaScript doesn't perform arithmetic when combining numbers and strings; instead, it converts the number to a string and concatenates from left to right.`,
+      3: `In JavaScript,  when you add a number to a string, JavaScript treats the number like a string, converting it and concatenating them instead of performing arithmetic.`,
+      4: `NaN (Not a Number) occurs when performing invalid mathematical operations, but here JavaScript is doing string concatenation, not math, so NaN wouldn't be the result.`,
     },
     options: [
       { number: 1, option: `"122"` },
@@ -108,22 +111,49 @@ const HomeDetailScreen = ({ navigation, route }) => {
       setModalVisible(false);
     };
 
-    const modalChildren = () => {
+    const correctModalChildren = () => {
       return (
         <Col mt12 justifyCenter alignCenter>
+          <Col>
+            <LottieView source={animation_confetti} loop autoPlay />
+          </Col>
           <Col alignCenter>
-            <Image source={require('../../assets/images/badges/bronze_badge.png')} style={{ width: 120, height: 179 }} />
+            <Image source={bronze_badge} style={{ width: 120, height: 179 }} />
           </Col>
           <BodyL>You've earned your daily challenge bronze badge!</BodyL>
-
-          <ProgressBar title="Earn silver badge" progress={10} style={{ marginTop: 12 }} />
+          <Row alignCenter wp100 mt12>
+            <Image source={silver_badge} style={{ width: 40, height: 60, marginRight: 10 }} />
+            <ProgressBar title="Earn silver badge" progress={30} />
+          </Row>
         </Col>
       );
     };
 
+    const incorrectModalChildren = () => {
+      return (
+        <Col mt12 justifyCenter alignCenter>
+          <BodyM>{questionExample.explanation[selected]}</BodyM>
+        </Col>
+      );
+    };
+
+    if (selected === questionExample.answer) {
+      return (
+        <CustomModal isVisible={isModalVisible} title="Congratulations!" buttonText="Back to Home" onButtonPress={onButtonPress} onClose={onClose}>
+          {correctModalChildren()}
+        </CustomModal>
+      );
+    }
+
     return (
-      <CustomModal isVisible={isModalVisible} title="Congratulations!" buttonText="Back to Home" onButtonPress={onButtonPress} onClose={onClose}>
-        {modalChildren()}
+      <CustomModal
+        isVisible={isModalVisible}
+        title="Try Again"
+        buttonText="Try Again"
+        onButtonPress={onButtonPress}
+        onClose={onClose}
+        animationIn="shake">
+        {incorrectModalChildren()}
       </CustomModal>
     );
   };
@@ -140,6 +170,16 @@ const HomeDetailScreen = ({ navigation, route }) => {
           {renderQuestion()}
           {renderQuestionCode()}
           {renderAnswerOptions()}
+          <Col h300 w100>
+            <LottieView
+              source={animation_confetti}
+              loop
+              autoPlay
+              style={{ width: '100%', height: '100%' }}
+              onAnimationFinish={() => console.log('Animation finished')}
+              onAnimationLoaded={() => console.log('loaded')}
+            />
+          </Col>
 
           <IconButton text={{ value: 'Submit' }} isFullWidth size="medium" onPress={handleSubmit} state={!selected ? 'disabled' : 'enabled'} />
         </Col>

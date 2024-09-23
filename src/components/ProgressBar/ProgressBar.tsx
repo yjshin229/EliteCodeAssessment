@@ -68,7 +68,7 @@ const ProgressBar = ({ progress, title, animationDelayTime = 0, animationDuratio
    ***********/
 
   return (
-    <Col wp100 style={style}>
+    <Col flex style={style}>
       <Row alignCenter>
         <LabelS>{title}</LabelS>
       </Row>

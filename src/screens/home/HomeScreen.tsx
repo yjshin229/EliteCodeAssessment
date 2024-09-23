@@ -3,6 +3,7 @@ import { BodyM, TitleXL } from '../../components/Design/Typography';
 import { Col, Row } from '../../components/Design/StyleAsProps';
 import WelcomeHeader from './WelcomeHeader';
 import ChallengeCard from '../../components/Card/ChallengeCard';
+import { user_01a } from '../../assets/images/user_avatar';
 
 const HomeScreen = ({ navigation, route }) => {
   /************
@@ -22,15 +23,13 @@ const HomeScreen = ({ navigation, route }) => {
     );
   };
 
-  const img = require('../../assets/images/User_01a.png');
-
   /***********
    * render()
    ***********/
 
   return (
     <Col flex ph18 pt12 bgNeutral100>
-      <WelcomeHeader name="John Doe" profilePic={img} />
+      <WelcomeHeader name="John Doe" profilePic={user_01a} />
       <ChallengeCard text={`Challenge \nof the Day`} />
       {renderExploreHeader()}
     </Col>

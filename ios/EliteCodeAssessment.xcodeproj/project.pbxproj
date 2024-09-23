@@ -12,11 +12,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		28A77C3C830C276C71788C1D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3667FABA03CBC90F660AA8C5 /* PrivacyInfo.xcprivacy */; };
-		3A120194357C709401AED418 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBACC307CF174D0B413392E2 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */; };
 		3E46A6DB5BB246889D2A1051 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */; };
-		73F303927E025C5A8F925F67 /* libPods-EliteCodeAssessment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB0113E8FD291E399C50ACC /* libPods-EliteCodeAssessment.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		883C01CF42374C2B93EFF93D /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 041295610D7245D386DFCFB8 /* Montserrat-SemiBold.ttf */; };
+		895D40AE79413BC122CA69C1 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77EA42CEB593AE2E4ED93F64 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */; };
+		94AA627E03A5513044FCCE19 /* libPods-EliteCodeAssessment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBC9F98F54B5907B8CCCAFF /* libPods-EliteCodeAssessment.a */; };
 		E620AD0714D044E3B647B039 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* EliteCodeAssessmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EliteCodeAssessmentTests.m; sourceTree = "<group>"; };
 		041295610D7245D386DFCFB8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBold.ttf"; path = "../src/assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		0DBC9F98F54B5907B8CCCAFF /* libPods-EliteCodeAssessment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EliteCodeAssessment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* EliteCodeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EliteCodeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EliteCodeAssessment/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = EliteCodeAssessment/AppDelegate.mm; sourceTree = "<group>"; };
@@ -42,17 +43,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EliteCodeAssessment/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EliteCodeAssessment/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = EliteCodeAssessment/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		2B000BB2BF431722A60DB4A4 /* Pods-EliteCodeAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment.release.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		3667FABA03CBC90F660AA8C5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = EliteCodeAssessment/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		544C48BCAC884B2FA7B2EF10 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		6AB0113E8FD291E399C50ACC /* libPods-EliteCodeAssessment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EliteCodeAssessment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		583BA7D10122D5A7021308FF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BC7B026EFE24A1ED126E869 /* Pods-EliteCodeAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment.release.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		6F6F567849F740789FCC9A61 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		77EA42CEB593AE2E4ED93F64 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EliteCodeAssessment/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CBACC307CF174D0B413392E2 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D528D4F7C2C74923C4095D99 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9723212A2C81460752481F80 /* Pods-EliteCodeAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment.debug.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment.debug.xcconfig"; sourceTree = "<group>"; };
+		9B8D0798C8F874A552057434 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F4976148819A1006473A5A9F /* Pods-EliteCodeAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment.debug.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment.debug.xcconfig"; sourceTree = "<group>"; };
-		FCCAC4CDED9EB40672311CEF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig"; path = "Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A120194357C709401AED418 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a in Frameworks */,
+				895D40AE79413BC122CA69C1 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73F303927E025C5A8F925F67 /* libPods-EliteCodeAssessment.a in Frameworks */,
+				94AA627E03A5513044FCCE19 /* libPods-EliteCodeAssessment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6AB0113E8FD291E399C50ACC /* libPods-EliteCodeAssessment.a */,
-				CBACC307CF174D0B413392E2 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */,
+				0DBC9F98F54B5907B8CCCAFF /* libPods-EliteCodeAssessment.a */,
+				77EA42CEB593AE2E4ED93F64 /* libPods-EliteCodeAssessment-EliteCodeAssessmentTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,10 +152,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F4976148819A1006473A5A9F /* Pods-EliteCodeAssessment.debug.xcconfig */,
-				2B000BB2BF431722A60DB4A4 /* Pods-EliteCodeAssessment.release.xcconfig */,
-				D528D4F7C2C74923C4095D99 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */,
-				FCCAC4CDED9EB40672311CEF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */,
+				9723212A2C81460752481F80 /* Pods-EliteCodeAssessment.debug.xcconfig */,
+				6BC7B026EFE24A1ED126E869 /* Pods-EliteCodeAssessment.release.xcconfig */,
+				583BA7D10122D5A7021308FF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */,
+				9B8D0798C8F874A552057434 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -178,12 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EliteCodeAssessmentTests" */;
 			buildPhases = (
-				131983913A48D307329F6481 /* [CP] Check Pods Manifest.lock */,
+				59F9D9285FE278A18C065825 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D14CAA8C5E1A2465042496FD /* [CP] Embed Pods Frameworks */,
-				123DD56B41129F5AE12F4107 /* [CP] Copy Pods Resources */,
+				362B871396910CA6882E7887 /* [CP] Embed Pods Frameworks */,
+				A990E4D2BE4D182A0904F950 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,13 +199,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EliteCodeAssessment" */;
 			buildPhases = (
-				5938AC03B5F9CCDC5555B76E /* [CP] Check Pods Manifest.lock */,
+				48AFAA2E2831024900590827 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				FD2F97D453CF804439E0F619 /* [CP] Embed Pods Frameworks */,
-				F212B61798A70BA4B93A1A3F /* [CP] Copy Pods Resources */,
+				6F09A9F5BE1F9656C0C5EF37 /* [CP] Embed Pods Frameworks */,
+				54BBE7764D94EA9CABFC31CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,46 +292,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		123DD56B41129F5AE12F4107 /* [CP] Copy Pods Resources */ = {
+		362B871396910CA6882E7887 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		131983913A48D307329F6481 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5938AC03B5F9CCDC5555B76E /* [CP] Check Pods Manifest.lock */ = {
+		48AFAA2E2831024900590827 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,24 +331,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D14CAA8C5E1A2465042496FD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F212B61798A70BA4B93A1A3F /* [CP] Copy Pods Resources */ = {
+		54BBE7764D94EA9CABFC31CF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,7 +348,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD2F97D453CF804439E0F619 /* [CP] Embed Pods Frameworks */ = {
+		59F9D9285FE278A18C065825 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F09A9F5BE1F9656C0C5EF37 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,6 +385,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment/Pods-EliteCodeAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A990E4D2BE4D182A0904F950 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EliteCodeAssessment-EliteCodeAssessmentTests/Pods-EliteCodeAssessment-EliteCodeAssessmentTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,7 +437,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D528D4F7C2C74923C4095D99 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */;
+			baseConfigurationReference = 583BA7D10122D5A7021308FF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -464,7 +464,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCCAC4CDED9EB40672311CEF /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */;
+			baseConfigurationReference = 9B8D0798C8F874A552057434 /* Pods-EliteCodeAssessment-EliteCodeAssessmentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -488,7 +488,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4976148819A1006473A5A9F /* Pods-EliteCodeAssessment.debug.xcconfig */;
+			baseConfigurationReference = 9723212A2C81460752481F80 /* Pods-EliteCodeAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -515,7 +515,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B000BB2BF431722A60DB4A4 /* Pods-EliteCodeAssessment.release.xcconfig */;
+			baseConfigurationReference = 6BC7B026EFE24A1ED126E869 /* Pods-EliteCodeAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
