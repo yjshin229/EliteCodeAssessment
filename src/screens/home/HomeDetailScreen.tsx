@@ -114,9 +114,6 @@ const HomeDetailScreen = ({ navigation, route }) => {
     const correctModalChildren = () => {
       return (
         <Col mt12 justifyCenter alignCenter>
-          <Col>
-            <LottieView source={animation_confetti} loop autoPlay />
-          </Col>
           <Col alignCenter>
             <Image source={bronze_badge} style={{ width: 120, height: 179 }} />
           </Col>
@@ -139,7 +136,13 @@ const HomeDetailScreen = ({ navigation, route }) => {
 
     if (selected === questionExample.answer) {
       return (
-        <CustomModal isVisible={isModalVisible} title="Congratulations!" buttonText="Back to Home" onButtonPress={onButtonPress} onClose={onClose}>
+        <CustomModal
+          isVisible={isModalVisible}
+          title="Congratulations!"
+          buttonText="Back to Home"
+          onButtonPress={onButtonPress}
+          onClose={onClose}
+          celebrate>
           {correctModalChildren()}
         </CustomModal>
       );
@@ -170,17 +173,6 @@ const HomeDetailScreen = ({ navigation, route }) => {
           {renderQuestion()}
           {renderQuestionCode()}
           {renderAnswerOptions()}
-          <Col h300 w100>
-            <LottieView
-              source={animation_confetti}
-              loop
-              autoPlay
-              style={{ width: '100%', height: '100%' }}
-              onAnimationFinish={() => console.log('Animation finished')}
-              onAnimationLoaded={() => console.log('loaded')}
-            />
-          </Col>
-
           <IconButton text={{ value: 'Submit' }} isFullWidth size="medium" onPress={handleSubmit} state={!selected ? 'disabled' : 'enabled'} />
         </Col>
       </Col>

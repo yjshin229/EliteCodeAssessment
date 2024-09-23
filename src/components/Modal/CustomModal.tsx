@@ -8,6 +8,8 @@ import IconButton from '../Buttons/IconButton';
 import { NeutralColor } from '../Design/Library';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
+import LottieView from 'lottie-react-native';
+import { animation_confetti } from '../../assets/animations';
 
 interface ModalProps {
   isVisible: boolean;
@@ -17,9 +19,10 @@ interface ModalProps {
   onClose: () => void;
   onButtonPress: () => void;
   animationIn?: 'zoomIn' | 'shake';
+  celebrate?: boolean;
 }
 
-const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButtonPress, animationIn = 'zoomIn' }: ModalProps) => {
+const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButtonPress, animationIn = 'zoomIn', celebrate = false }: ModalProps) => {
   /*********
    * recoil
    *********/
@@ -68,6 +71,12 @@ const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButton
       animationIn={animationIn}
       animationOut={'zoomOut'}>
       <Col bgNeutral100 radius20 ph18 pb22 pt12 justifyCenter alignCenter>
+        {celebrate && (
+          <Col absolute top0 left0 bottom0 right0>
+            <LottieView source={animation_confetti} loop={false} autoPlay style={{ width: '100%', height: '100%' }} />
+          </Col>
+        )}
+
         <TouchableOpacity style={{ alignSelf: 'flex-end' }} onPress={onClose}>
           <Ionicons name="close-outline" size={24} />
         </TouchableOpacity>
