@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
-import { BodyL, BodyM, LabelL } from '../../components/Design/Typography';
+import React, { useState } from 'react';
+import { Image } from 'react-native';
+import { BodyL, BodyM } from '../../components/Design/Typography';
 import { Header } from '../../components/Header';
 import { Col, Row } from '../../components/Design/StyleAsProps';
 import AnswerCard from '../../components/Card/AnswerCard';
@@ -10,8 +10,6 @@ import { EliteCodeNavigationModule } from '../../navigation/NavigationModule';
 import CustomModal from '../../components/Modal/CustomModal';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import { bronze_badge, silver_badge } from '../../assets/images/badges';
-import LottieView from 'lottie-react-native';
-import { animation_confetti } from '../../assets/animations';
 
 interface Props {}
 
@@ -103,7 +101,13 @@ const HomeDetailScreen = ({ navigation, route }) => {
   const renderModal = () => {
     const onButtonPress = () => {
       setModalVisible(false);
-      return EliteCodeNavigationModule.popToTop();
+
+      if (selected === questionExample.answer) {
+        return EliteCodeNavigationModule.popToTop();
+      } else {
+        console.log('incorrect!');
+        return;
+      }
     };
 
     const onClose = () => {

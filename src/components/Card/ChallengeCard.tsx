@@ -7,18 +7,25 @@ import { deviceInfo } from '../../utilities/deviceInfo';
 import { EliteCodeNavigationModule } from '../../navigation/NavigationModule';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { NeutralColor } from '../Design/Library';
+import { challenge_bg } from '../../assets/images/background';
 
 interface Props {
   text: string;
 }
 
 const ChallengeCard = ({ text }: Props) => {
+  const deviceheight = deviceInfo.size.height;
+
   /************
    * functions
    ************/
 
   const onPress = () => {
     return EliteCodeNavigationModule.navigate('HomeDetailScreen', { title: 'Challenge of the Day' });
+  };
+
+  const getCardHeight = () => {
+    return deviceheight * 0.2;
   };
 
   /*********
@@ -75,9 +82,9 @@ const ChallengeCard = ({ text }: Props) => {
    ***********/
 
   return (
-    <Col style={renderShadow()} radius20 mt12>
-      <TouchableWithoutFeedback onPress={onPress} style={[{ height: 150, borderRadius: 20, overflow: 'hidden' }]}>
-        <Image source={require('../../assets/images/challenge_bg.png')} style={{ width: '100%', height: '100%' }} />
+    <Col style={renderShadow()} radius20 mt12 h={getCardHeight()} overflowHidden>
+      <TouchableWithoutFeedback onPress={onPress}>
+        <Image source={challenge_bg} style={{ width: '100%', height: '100%' }} />
         {renderContent()}
       </TouchableWithoutFeedback>
     </Col>
