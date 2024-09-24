@@ -155,7 +155,7 @@ const HomeDetailScreen = ({ navigation, route }) => {
       <CustomModal
         isVisible={isModalVisible}
         title="Try Again"
-        buttonText="Try Again"
+        buttonText="Retry"
         onButtonPress={onButtonPress}
         onClose={onClose}
         animationIn="shake">
