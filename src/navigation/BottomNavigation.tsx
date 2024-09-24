@@ -32,11 +32,7 @@ const BottomTabBar = ({ state, descriptors, navigation }) => {
       ph16
       pb={deviceInfo.iosHasNotch ? 22 : 0}
       borderTW1
-      borderTColor={NeutralColor['neutral-90']}
-      shadowColor={'rgba(0,0,0,0.1)'}
-      shadowOpacity={0.35}
-      shadowRadius={4}
-      style={deviceInfo.OS === 'android' ? { elevation: 4, shadowColor: 'rgba(0,0,0,0.35)' } : undefined}>
+      borderTColor={NeutralColor['neutral-90']}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
 
