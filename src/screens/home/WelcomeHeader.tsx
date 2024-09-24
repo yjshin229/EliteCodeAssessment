@@ -1,11 +1,11 @@
 import React from 'react';
-import { Image, StyleSheet, Text } from 'react-native';
+import { Image, ImageSourcePropType, StyleSheet, Text } from 'react-native';
 import { BodyM, HeadlineS, LabelL } from '../../components/Design/Typography';
 import { Col, Row } from '../../components/Design/StyleAsProps';
 
 interface Props {
   name: string;
-  profilePic: string;
+  profilePic: ImageSourcePropType;
 }
 
 const WelcomeHeader = ({ name, profilePic }: Props) => {
