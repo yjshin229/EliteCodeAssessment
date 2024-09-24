@@ -23,45 +23,6 @@ interface ModalProps {
 }
 
 const CustomModal = ({ isVisible, title, children, buttonText, onClose, onButtonPress, animationIn = 'zoomIn', celebrate = false }: ModalProps) => {
-  /*********
-   * recoil
-   *********/
-
-  /**************************
-   * props, navigation prams
-   **************************/
-
-  /*************
-   * state, ref
-   *************/
-
-  const [isRendering, setIsRendering] = useState<boolean>(true);
-
-  /**************
-   * life cycles
-   **************/
-
-  useEffect(() => {
-    // ComponentDidMount
-
-    // setIsRendering(false)
-    return () => {
-      // ComponentWillUnmount
-    };
-  }, []);
-
-  /************
-   * functions
-   ************/
-
-  /*********
-   * render
-   *********/
-
-  /***********
-   * render()
-   ***********/
-
   return (
     <Modal
       isVisible={isVisible}

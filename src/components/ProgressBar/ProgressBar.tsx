@@ -26,7 +26,6 @@ const ProgressBar = ({ progress, title, animationDelayTime = 0, animationDuratio
       width: `${animatedWidth.value}%`,
     };
   });
-  const [isRendering, setIsRendering] = useState<boolean>(true);
 
   /**************
    * life cycles
@@ -50,22 +49,6 @@ const ProgressBar = ({ progress, title, animationDelayTime = 0, animationDuratio
       }, animationDelayTime);
     }
   }, [progress]);
-
-  /************
-   * functions
-   ************/
-
-  /*********
-   * render
-   *********/
-
-  // if (isRendering === true) {
-  // return null
-  // }
-
-  /***********
-   * render()
-   ***********/
 
   return (
     <Col flex style={style}>
