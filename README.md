@@ -37,7 +37,16 @@ yarn android
 
 ```bash
 # using Yarn
+
 yarn ios
+```
+
+⭐ The simulator is set to default for iphone 15 pro
+If you want to change the simulator you can manually open a different simulator on xcode or run
+
+```bash
+npx react-native run-ios --simulator="{iphone simulator name}"
+#ex) npx react-native run-ios --simulator="iPhone 15 Plus
 ```
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
